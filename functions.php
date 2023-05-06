@@ -92,6 +92,15 @@ add_action('init', 'my_clean_theme_fn');
  */
 // code here
 
+add_action( 'init', 'add_cpt_properties' );
+function add_cpt_properties() {
+     $args = array(
+     'public' => true,
+     'label' => 'properties'
+);
+register_post_type( 'properties', $args );
+}
+
 
 /**
  * ## Registra una taxonomia nueva para el post type creado anteriormente
