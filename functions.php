@@ -53,8 +53,8 @@ add_action('init', 'my_theme_supports_fn');
 
 function my_theme_js_css_fn()
 {
-    wp_enqueue_script('examenjsmain', plugins_url('assets/js/main.js', __FILE__), array('jquery'), 1.0, true);
-    wp_enqueue_style('examencssmain', plugins_url('assets/css/main.css', __FILE__));
+    wp_enqueue_script('examenjsmain', plugins_url('dist/js/main.js', __FILE__), array('jquery'), 1.0, true);
+    wp_enqueue_style('examencssmain', plugins_url('dist/css/main.css', __FILE__));
 }
 add_action('wp_enqueue_scripts', 'my_theme_js_css_fn');
 
@@ -197,8 +197,8 @@ add_filter( "parse_query", "modify_get_search_query_defaults", 10, 1 );
 // code here
 function add_blog_css_js() {
     if ( is_single() ) {
-        wp_enqueue_style( 'blogstyles', plugins_url('assets/css/blog-styles.css', __FILE__));
-        wp_enqueue_script( 'blogjavascript', plugins_url('assets/js/blog-scripts.js', __FILE__) );
+        wp_enqueue_style( 'blogstyles', plugins_url('dist/css/blog-styles.css', __FILE__));
+        wp_enqueue_script( 'blogjavascript', plugins_url('dist/js/blog-scripts.js', __FILE__) );
     }
 }
 add_action( 'wp_enqueue_scripts', 'add_blog_css_js' );
@@ -235,7 +235,7 @@ function changue_numbers($content){
 function new_style_button() {
     wp_register_style(
         'button-black',
-        plugins_url('assets/css/button.css', __FILE__),
+        plugins_url('dist/css/button.css', __FILE__),
         array( 'wp-block-library' ),
         '1.0'
     );

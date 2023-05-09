@@ -1,0 +1,63 @@
+# Created by https://www.toptal.com/developers/gitignore/api/laravel,wordpress
+# Edit at https://www.toptal.com/developers/gitignore?templates=laravel,wordpress
+
+### Laravel ###
+/vendor/
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+public/storage
+public/hot
+
+# Laravel 5 & Lumen specific with changed public path
+public_html/storage
+public_html/hot
+
+storage/*.key
+.env
+Homestead.yaml
+Homestead.json
+/.vagrant
+.phpunit.result.cache
+
+### WordPress ###
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/themes/index.php
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+/xmlrpc.php
+
+# Log files
+*.log
+
+# htaccess
+/.htaccess
+
+# All plugins
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+# All themes
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
+
+
+# End of https://www.toptal.com/developers/gitignore/api/laravel,wordpress
